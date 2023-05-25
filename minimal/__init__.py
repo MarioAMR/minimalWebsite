@@ -6,7 +6,7 @@ db = SQLAlchemy()
 DB_NAME = "database.db"
 from .jinjafilters import *
 from .errorhandlers import *
-
+os.environ["SESSION_SECRET"]="MySessionSecret" 
 def create_app():
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
